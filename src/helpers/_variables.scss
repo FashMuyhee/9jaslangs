@@ -1,0 +1,14 @@
+$colors: (
+  primary: #1392bf,
+  accent: #f3f2e9,
+  secondary: lighten(#1392bf, 30%)
+);
+// $neumorphism: 9px 9px 16px #a3b1c699, -9px -9px 16px  #ffffff80;
+$neumorphism: none;
+
+$desktop: 840px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
