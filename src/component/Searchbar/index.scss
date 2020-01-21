@@ -1,0 +1,30 @@
+@import "../../helpers/_variables.scss";
+
+.searchbar {
+  width: 100%;
+  position: relative;
+  border: 1px solid #f3f2e9;
+  border-radius: 25px;
+  @include desktop {
+    width: 457px;
+  }
+
+  .search-input {
+    width: 88%;
+    @include desktop {
+      width: 93%;
+    }
+  }
+  img.search-icon {
+    position: absolute;
+    // border: 1px solid red;
+    right: 0;
+    height: 40px;
+    align-items: center;
+    background: map-get($colors, secondary);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 3px;
+    // box-shadow: 9px 9px 16px #a3b1c699, -9px -9px 16px  #ffffff80;
+  }
+}

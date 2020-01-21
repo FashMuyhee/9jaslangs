@@ -1,0 +1,30 @@
+@import "../../helpers/_variables.scss";
+
+button {
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  // min-width: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  box-shadow: $neumorphism;
+  background: map-get($colors, secondary );
+}
+.icon-only {
+  @extend button;
+  width: auto;
+}
+.fab {
+  @extend .icon-only;
+  position: fixed;
+  bottom: 5%;
+  right: 10px;
+}
+.with-icon {
+  @extend button;
+  justify-content: space-around;
+  min-width: 150px;
+}
