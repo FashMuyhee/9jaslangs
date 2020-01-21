@@ -1,0 +1,43 @@
+@import "../../helpers/_variables";
+
+.result-page {
+  padding-top: 15%;
+  @include desktop {
+    padding-top: 10%;
+  }
+  .result {
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  .display-none {
+    @include desktop {
+      display: none;
+    }
+  }
+  .title {
+    font-weight: bolder;
+    color: #1392bf;
+  }
+  .text {
+    font-family: monospace;
+    color: black;
+  }
+  .author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.hide-bg {
+  @include desktop {
+    display: none;
+  }
+}
+.hide-sm {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
