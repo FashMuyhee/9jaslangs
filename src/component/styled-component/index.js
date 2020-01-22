@@ -25,12 +25,30 @@ const Title = styled.h2.attrs(props => ({
   margin-bottom: 0px;
 `;
 
-const InputText = styled.input`
+const InputText = styled.input.attrs(props => ({
+  borderColor: props.borderColor || "none"
+}))`
   padding: 15px;
   border-radius: 26px;
-  border: none;
+  border: ${props =>
+    props.borderColor ? `1px solid ${props.borderColor}` : "none"};
   width: 90%;
   color: black;
+  margin-bottom: 15px;
+  background: white;
+  // box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+  //   -9px -9px 16px rgba(255, 255, 255, 0.5);
+`;
+const TextArea = styled.textarea.attrs(props => ({
+  borderColor: props.borderColor || "none"
+}))`
+  padding: 15px;
+  border-radius: 5px;
+  border: ${props =>
+    props.borderColor ? `1px solid ${props.borderColor}` : "none"};
+  width: 90%;
+  color: black;
+  margin-bottom: 15px;
   background: white;
   // box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
   //   -9px -9px 16px rgba(255, 255, 255, 0.5);
@@ -44,8 +62,8 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Icon = styled.img.attrs(props => ({
-  background: props.background || "#79d2f2"
+  background: props.background || 'transparent'
 }))`
   background: ${props => props.background};
 `;
-export { Text, Title, Container, InputText, Icon };
+export { Text, Title, Container, InputText, TextArea, Icon };
