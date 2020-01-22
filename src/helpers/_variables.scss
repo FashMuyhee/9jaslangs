@@ -7,8 +7,16 @@ $colors: (
 $neumorphism: none;
 
 $desktop: 840px;
+$tablet: 740px;
+
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width :$tablet) and (max-width: $desktop ) {
     @content;
   }
 }
