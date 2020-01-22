@@ -1,0 +1,75 @@
+@import "../../helpers/_variables";
+
+.signin-page {
+  //   background: map-get($colors, accent);
+  background: rgb(216, 216, 224);
+  background: linear-gradient(
+    45deg,
+    rgba(216, 216, 224, 1) 32%,
+    rgba(252, 242, 242, 1) 52%
+  );
+  height: 100vh;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // border: 1px solid red;
+
+    .greeting {
+      //   border: 1px solid green;
+      text-align: center;
+      padding: 15% 5% 2% 5%;
+      img {
+        width: 68%;
+        // border: 1px solid rebeccapurple;
+      }
+      h2 {
+        color: black;
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      p {
+        color: black;
+        margin-top: 2px;
+        text-align: center;
+        font-family: monospace;
+      }
+    }
+    .small-text {
+      color: black;
+    }
+
+    .social-button {
+      display: flex;
+      .btn-facebook {
+        background: #3b5998;
+        margin-right: 10px;
+      }
+      .btn-google {
+        margin-left: 10px;
+        background: #ea4335;
+      }
+    }
+    .link-text {
+      margin-top: 15%;
+      color: black;
+      a {
+        text-decoration: none;
+        color: map-get($colors, secondary);
+      }
+    }
+  }
+
+  .signin-form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .btn {
+      background: map-get($colors, primary);
+    }
+  }
+}
