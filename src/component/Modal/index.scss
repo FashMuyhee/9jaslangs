@@ -1,0 +1,123 @@
+@import "../../helpers/_variables";
+.main-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  .modal-container {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    animation: scale-in-center 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1s both;
+
+    @include desktop {
+      padding: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: 70%;
+      border-radius: 11px;
+    }
+    @include tablet {
+      padding: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75%;
+      height: 70%;
+      border-radius: 11px;
+    }
+    .modal-header {
+      // border: 1px solid red;
+      display: flex;
+      height: 55px;
+      background-color: map-get($colors, primary);
+      justify-content: space-between;
+      align-items: center;
+      @include desktop {
+        justify-content: flex-end;
+        align-items: center;
+        background: none;
+      }
+      @include tablet {
+        justify-content: flex-end;
+        align-items: center;
+        background: none;
+      }
+      .modal-header-title {
+        font-size: small;
+        margin-left: -10%;
+        margin-top: 0%;
+        @include desktop {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+      .modal-back {
+        @include desktop {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+
+      .modal-cancel {
+        display: none;
+        @include desktop {
+          display: block;
+          background-color: transparent;
+        }
+        @include tablet {
+          display: block;
+          background-color: transparent;
+        }
+      }
+    }
+    .modal-content {
+      padding: 10px;
+      .modal-title {
+        display: none;
+        @include desktop {
+          display: block;
+          color: black;
+          font-size: 1em;
+          margin-top: 0px;
+        }
+        @include tablet {
+          display: block;
+          color: black;
+          font-size: 1em;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
