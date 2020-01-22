@@ -1,37 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
-import { Header, Searchbar } from "../../component";
-import { Container, Icon, Title, Text } from "../../component/styled-component";
+import { Header, Searchbar, Modal } from "../../component";
+import { Container, Icon, Title, Text, InputText } from "../../component/styled-component";
+import colors from '../../helpers/colors'
 import search from "../../img/icons/search.png";
 import back from "../../img/icons/back.png";
-const Left = props => (
+const Left = ({ onClick }) => (
   <>
-    <Icon
-      src={back}
-      alt="back"
-      onClick={() => {
-        props.history.goBack();
-      }}
-      className="hide-bg"
-    />
+    <Icon src={back} alt="back" onClick={onClick} className="hide-bg" />
     <span className="header-logo hide-sm" />
   </>
 );
 
-const Right = () => (
+const Right = ({ onClick }) => (
   <>
-    <Icon src={search} alt="search" className="hide-bg" />
+    <Icon src={search} alt="search" className="hide-bg" onClick={onClick} />
     <Searchbar customClass="hide-sm" />
   </>
 );
-const Result = () => {
+const Result = props => {
+  const [modal_state, setModalState] = useState(false);
+
+  const handleModalClose = () => {
+    setModalState(false);
+  };
+
+  const handleModalOpen = () => {
+    setModalState(true);
+    setModalState(true);
+  };
+  const ModalSearch = () =>(
+    <div className="modal-search">
+      <InputText placeholder="Pariatur duis" name="query" className="modal-input"/>
+    </div>
+  )
   return (
     <>
       <Header
-        color="#79d2f2"
-        left={<Left />}
+        color={colors.primary}
+        left={<Left onClick={() => props.history.goBack()} />}
         title="Mad oo"
-        right={<Right />}
+        right={<Right onClick={handleModalOpen} />}
       />
       <main className="result-page">
         <Container className="result">
@@ -57,11 +66,16 @@ const Result = () => {
           </section>
           <section className="author">
             <Title className="title" size=".7em" case="capitalize">
-              Added by:
+              Slang Credit:
             </Title>
             <Text className="text">Fash Muyhee</Text>
           </section>
         </Container>
+        <Modal
+          show={modal_state}
+          others={<ModalSearch />}
+          handleClose={handleModalClose}
+        ></Modal>
       </main>
     </>
   );
