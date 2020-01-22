@@ -3,15 +3,21 @@
 .searchbar {
   width: 100%;
   position: relative;
-  border: 1px solid #f3f2e9;
+  // border: 1px solid #f3f2e9;
   border-radius: 25px;
   @include desktop {
     width: 457px;
   }
+  @include tablet {
+    width: 80%;
+  }
 
   .search-input {
-    width: 88%;
+    width: 90%;
     @include desktop {
+      width: 93%;
+    }
+    @include tablet{
       width: 93%;
     }
   }
