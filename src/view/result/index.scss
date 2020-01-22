@@ -41,3 +41,15 @@
     display: block;
   }
 }
+.modal-search{
+  width:90%;
+  input {
+    background:  map-get($colors, primary);
+    border: none;
+    border-bottom: 1px solid  map-get($colors, accent);
+    border-radius: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    color:white
+  }
+}
