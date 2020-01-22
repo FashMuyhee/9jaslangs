@@ -11,7 +11,14 @@ button {
   align-items: center;
   font-size: 19px;
   box-shadow: $neumorphism;
-  background: map-get($colors, secondary );
+  background: map-get($colors, secondary);
+  color: map-get($colors, accent);
+  justify-content: center;
+  text-transform: uppercase;
+}
+.just-button {
+  @extend button;
+  min-width: 190px;
 }
 .icon-only {
   @extend button;
