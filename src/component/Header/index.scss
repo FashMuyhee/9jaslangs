@@ -40,9 +40,16 @@
       width: 35%;
       display: block;
     }
+    @include tablet {
+      width: 50%;
+      display: block;
+    }
     .no-visible {
       display: none;
       @include desktop {
+        display: inline-block;
+      }
+      @include tablet {
         display: inline-block;
       }
     }
@@ -60,7 +67,11 @@
         text-decoration: none;
         color: white;
         font-size: 14px;
+        padding-left: 12px;
         @include desktop {
+          padding-left: 12px;
+        }
+        @include tablet {
           padding-left: 12px;
         }
       }
