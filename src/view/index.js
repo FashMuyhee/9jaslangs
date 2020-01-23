@@ -8,21 +8,15 @@ import Eroor404 from "./404";
 const Layout = () => {
   return (
     <>
-        <Switch>
-          {/* <Route path="/" exact component={Result} /> */}
-          <Route path="/" exact component={Home} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
-          <Route path="/result/:slang" component={Result} />
-          <Route component={Eroor404} />
-          <Redirect to="/" />
-        </Switch>
-      <footer>
-        Built & Designed by
-        <a href="/" target="blank">
-          Fash Muyhee
-        </a>
-      </footer>
+      <Switch>
+        {/* <Route path="/" exact component={Result} /> */}
+        <Route path="/" exact component={Home} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/result/:slang" component={Result} />
+        <Route component={Eroor404} />
+        <Redirect to="/" />
+      </Switch>
     </>
   );
 };
