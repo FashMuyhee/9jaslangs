@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
-import { Header, Searchbar, Modal } from "../../component";
+import { Header, Searchbar, Modal, Footer } from "../../component";
 import { Container, Icon, Title, Text, InputText } from "../../component/styled-component";
 import colors from '../../helpers/colors'
 import search from "../../img/icons/search.png";
@@ -77,6 +77,7 @@ const Result = props => {
           handleClose={handleModalClose}
         ></Modal>
       </main>
+      <Footer/>
     </>
   );
 };
