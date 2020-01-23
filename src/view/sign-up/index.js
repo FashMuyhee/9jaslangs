@@ -13,42 +13,46 @@ const SignUp = () => {
       <div className="content">
         <div className="greeting">
           <img src={welcome} alt="welcome" />
-          <Title case="capitilize">Let Get Started !</Title>
-          <Text subtitle>Create an account with 9ja Slangs to get all features</Text>
         </div>
-        <form className="signup-form">
-          <InputText
-            borderColor={colors.accent}
-            name="name"
-            type="text"
-            placeholder="Fullname"
-          />
-          <InputText
-            borderColor={colors.accent}
-            name="email"
-            type="email"
-            placeholder="Email"
-          />
-          <InputText
-            borderColor={colors.accent}
-            name="password"
-            type="password"
-            placeholder="Password"
-          />
-          <InputText
-            borderColor={colors.accent}
-            name="comfirm-password"
-            type="password"
-            placeholder="Confirm Password"
-          />
-          <Button type="submit" customStyle="btn">
-            Sign Up
-          </Button>
-        </form>
+        <div className="signup-form">
+          <Title case="capitilize">Let Get Started !</Title>
+          <Text subtitle className="welcome-text">
+            Create an account with 9ja Slangs to get all features
+          </Text>
+          <form>
+            <InputText
+              borderColor={colors.accent}
+              name="name"
+              type="text"
+              placeholder="Fullname"
+            />
+            <InputText
+              borderColor={colors.accent}
+              name="email"
+              type="email"
+              placeholder="Email"
+            />
+            <InputText
+              borderColor={colors.accent}
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <InputText
+              borderColor={colors.accent}
+              name="comfirm-password"
+              type="password"
+              placeholder="Confirm Password"
+            />
+            <Button type="submit" customStyle="btn">
+              Sign Up
+            </Button>
+          </form>
 
-        <Text className="link-text">
-          Have an account already ? <Link to="/signin">Sign In</Link>
-        </Text>
+          <Text className="link-text">
+            Have an account already ? <Link to="/signin">Sign In</Link>
+          </Text>
+        </div>
       </div>
     </main>
   );
