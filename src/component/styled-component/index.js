@@ -69,4 +69,24 @@ const Icon = styled.img.attrs(props => ({
 }))`
   background: ${props => props.background};
 `;
-export { Text, Title, Container, InputText, TextArea, Icon };
+
+const Avatar = styled.div`
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  line-height: 3;
+  color: ${colors.secondary};
+  margin-left: 10px;
+  margin-right: 10px;
+  @media (min-width: 860px) {
+    height: 50px;
+    width: 13%;
+  }
+  @media (min-width: 740px) and (max-width: 860px) {
+    height: 50px;
+    width: 18%;
+  }
+`;
+export { Text, Title, Container, InputText, TextArea, Icon, Avatar };
