@@ -15,6 +15,9 @@
     @include desktop {
       display: none;
     }
+    @include tablet {
+      display: none;
+    }
   }
   .title {
     font-weight: bolder;
@@ -34,22 +37,28 @@
   @include desktop {
     display: none;
   }
+  @include tablet {
+    display: none;
+  }
 }
 .hide-sm {
   display: none;
   @include desktop {
-    display: block;
+    display: flex;
+  }
+  @include tablet {
+    display: flex;
   }
 }
-.modal-search{
-  width:90%;
+.modal-search {
+  width: 90%;
   input {
-    background:  map-get($colors, primary);
+    background: map-get($colors, primary);
     border: none;
-    border-bottom: 1px solid  map-get($colors, accent);
+    border-bottom: 1px solid map-get($colors, accent);
     border-radius: 0px;
     padding-bottom: 5px;
     padding-left: 0px;
-    color:white
+    color: white;
   }
 }
