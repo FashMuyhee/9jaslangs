@@ -8,32 +8,38 @@
     rgba(216, 216, 224, 1) 32%,
     rgba(252, 242, 242, 1) 52%
   );
-  height: 100vh;
+  // height: 100vh;
+  @include desktop {
+    height: 100vh;
+  }
+  @include tablet {
+    height: 100vh;
+  }
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     // border: 1px solid red;
-
+    @include desktop {
+      height: 100vh;
+    }
+    @include tablet{
+      height: 100vh;
+    }
     .greeting {
       //   border: 1px solid green;
       text-align: center;
       padding: 15% 5% 2% 5%;
+      @include desktop {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
       img {
         width: 68%;
         // border: 1px solid rebeccapurple;
-      }
-      h2 {
-        color: black;
-        font-weight: bold;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-      }
-      p {
-        color: black;
-        margin-top: 2px;
-        text-align: center;
-        font-family: monospace;
       }
     }
     .small-text {
@@ -48,16 +54,43 @@
       }
     }
   }
-
+}
   .signup-form {
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    @include desktop {
+      width: 25%;
+      border: 1px solid map-get($colors, secondary);
+      padding: 15px;
+      border-radius: 5px;
+    }
+    @include tablet {
+      width: 50%;
+      border: 1px solid map-get($colors, secondary);
+      padding: 15px;
+      border-radius: 5px;
+    }
+    h2 {
+      color: black;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+    .welcome-text {
+      color: black;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: monospace;
+    }
     .btn {
       background: map-get($colors, primary);
+      margin: 0 auto;
+      @include tablet {
+        margin-top: 5%;
+      }
     }
   }
-}
+
