@@ -42,13 +42,15 @@
   }
   .header-links {
     // border: 1px solid green;
+    display: flex;
+    align-items: center;
     @include desktop {
       width: 35%;
-      display: block;
+      display: flex;
     }
     @include tablet {
       width: 50%;
-      display: block;
+      display: flex;
     }
     .no-visible {
       display: none;
@@ -69,17 +71,19 @@
     }
     li {
       list-style: none;
+      margin-right: 10px;
+
       a {
         text-decoration: none;
         color: white;
         font-size: 14px;
-        padding-left: 12px;
+       /*  padding-left: 12px;
         @include desktop {
           padding-left: 12px;
         }
         @include tablet {
           padding-left: 12px;
-        }
+        } */
       }
     }
   }
