@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import "./index.scss";
 import { Header, Searchbar, Modal, Footer } from "../../component";
-import { Container, Icon, Title, Text, InputText } from "../../component/styled-component";
-import colors from '../../helpers/colors'
+import {
+  Container,
+  Icon,
+  Title,
+  Text,
+  InputText,
+  Avatar
+} from "../../component/styled-component";
+import colors from "../../helpers/colors";
 import search from "../../img/icons/search.png";
 import back from "../../img/icons/back.png";
 const Left = ({ onClick }) => (
@@ -15,7 +22,8 @@ const Left = ({ onClick }) => (
 const Right = ({ onClick }) => (
   <>
     <Icon src={search} alt="search" className="hide-bg" onClick={onClick} />
-    <Searchbar customClass="hide-sm" />
+    <Searchbar customClass="hide-sm no-margin" />
+    <Avatar>FM</Avatar>
   </>
 );
 const Result = props => {
@@ -29,11 +37,15 @@ const Result = props => {
     setModalState(true);
     setModalState(true);
   };
-  const ModalSearch = () =>(
+  const ModalSearch = () => (
     <div className="modal-search">
-      <InputText placeholder="Pariatur duis" name="query" className="modal-input"/>
+      <InputText
+        placeholder="Pariatur duis"
+        name="query"
+        className="modal-input"
+      />
     </div>
-  )
+  );
   return (
     <>
       <Header
@@ -77,7 +89,7 @@ const Result = props => {
           handleClose={handleModalClose}
         ></Modal>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 };
