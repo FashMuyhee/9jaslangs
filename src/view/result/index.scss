@@ -50,6 +50,9 @@
     display: flex;
   }
 }
+.no-margin input{
+  margin-bottom: 0px;
+}
 .modal-search {
   width: 90%;
   input {
