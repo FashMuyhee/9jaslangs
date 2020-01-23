@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import colors from "../../helpers/colors";
 const Text = styled.p.attrs(props => ({
   case: props.case || "uppercase",
   align: props.align || "unset"
@@ -38,6 +38,9 @@ const InputText = styled.input.attrs(props => ({
   background: white;
   // box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
   //   -9px -9px 16px rgba(255, 255, 255, 0.5);
+  &:focus {
+    border: 1px solid ${colors.primary};
+  }
 `;
 const TextArea = styled.textarea.attrs(props => ({
   borderColor: props.borderColor || "none"
@@ -62,7 +65,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Icon = styled.img.attrs(props => ({
-  background: props.background || 'transparent'
+  background: props.background || "transparent"
 }))`
   background: ${props => props.background};
 `;
