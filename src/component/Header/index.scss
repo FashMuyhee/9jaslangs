@@ -11,6 +11,9 @@
   @include desktop {
     height: 80px;
   }
+  @include tablet {
+    height: 80px;
+  }
   .header-container {
     width: 90%;
     display: flex;
@@ -31,6 +34,9 @@
     // border: 1px solid white;
     margin-top: 0px;
     @include desktop {
+      display: none;
+    }
+    @include tablet {
       display: none;
     }
   }
