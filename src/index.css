@@ -18,17 +18,4 @@ body {
   /* background: #1392bf; */
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 40px;
-}
-footer a {
-  text-decoration: none;
-  color: #1392bf;
-  padding-left: 5px;
-}
+
