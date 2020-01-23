@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
-import { Header, Searchbar, Modal, Button } from "../../component";
+import { Header, Searchbar, Modal, Button, Footer } from "../../component";
 import {
   Title,
   Text,
@@ -77,6 +77,7 @@ const Home = () => {
           </form>
         </Modal>
       </main>
+      <Footer />
     </>
   );
 };
