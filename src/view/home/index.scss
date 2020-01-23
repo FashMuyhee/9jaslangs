@@ -19,6 +19,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @include desktop {
+      width: 40%;
+    }
+    @include tablet {
+      width: 55%;
+    }
   }
   h2 {
     @include desktop {
