@@ -7,7 +7,6 @@ import {
   Title,
   Text,
   InputText,
-  Avatar
 } from "../../component/styled-component";
 import colors from "../../helpers/colors";
 import search from "../../img/icons/search.png";
@@ -23,7 +22,6 @@ const Right = ({ onClick }) => (
   <>
     <Icon src={search} alt="search" className="hide-bg" onClick={onClick} />
     <Searchbar customClass="hide-sm no-margin" />
-    <Avatar>FM</Avatar>
   </>
 );
 const Result = props => {
