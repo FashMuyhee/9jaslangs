@@ -5,9 +5,10 @@ const Button = ({
   iconOnly,
   withIcon,
   children,
-  customStyle='',
+  customStyle = "",
   onClick,
-  link
+  link,
+  type
 }) => {
   let buttonStyle = "just-button";
   if (iconOnly) buttonStyle = "icon-only";
@@ -18,7 +19,7 @@ const Button = ({
   return (
     <button
       className={` ${customStyle} ${buttonStyle}`}
-      type="button"
+      type={type}
       onClick={onClick}
     >
       {children}
