@@ -13,16 +13,16 @@ const firebaseAppAuth = firebaseApp.auth();
 const Header = ({ left, title, right, color, onClick, user, signOut }) => {
   const [user_name, setuserName] = useState(null);
 
-  useEffect(() => {
+  /*  useEffect(() => {
     const username = localStorage.getItem("user");
     const array = username.split(" ");
     const new_username = `${array[0].charAt(0)} ${array[1].charAt(0)}`;
     setuserName(new_username);
-  }, []);
+  }, []); */
 
   const handleSignOut = () => {
     signOut().then(() => {
-      localStorage.clear()
+      localStorage.clear();
       console.log("signed out");
     });
   };
@@ -42,7 +42,7 @@ const Header = ({ left, title, right, color, onClick, user, signOut }) => {
         <nav className="header-links">
           {right}
           {user ? (
-            <Avatar onClick={handleSignOut}>{user_name}</Avatar>
+            <Avatar onClick={handleSignOut}>UN</Avatar>
           ) : (
             <ul>
               <li>
