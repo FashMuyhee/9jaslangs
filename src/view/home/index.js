@@ -35,7 +35,7 @@ const Home = () => {
   };
 
   const handleAddSlang = () => {
-    firebaseApp
+   /*  firebaseApp
       .firestore()
       .collection(`slangs`)
       .set({ name, email })
@@ -48,7 +48,7 @@ const Home = () => {
           showConfirmButton: false,
           timer: 2000
         });
-      });
+      }); */
   };
   return (
     <>
