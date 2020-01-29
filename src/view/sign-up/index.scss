@@ -1,5 +1,8 @@
 @import "../../helpers/_variables";
 
+body {
+  background: rgb(216, 216, 224);
+}
 .signup-page {
   //   background: map-get($colors, accent);
   background: rgb(216, 216, 224);
@@ -20,11 +23,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+
     // border: 1px solid red;
     @include desktop {
       height: 100vh;
     }
-    @include tablet{
+    @include tablet {
       height: 100vh;
     }
     .greeting {
@@ -55,42 +60,49 @@
     }
   }
 }
-  .signup-form {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    @include desktop {
-      width: 25%;
-      border: 1px solid map-get($colors, secondary);
-      padding: 15px;
-      border-radius: 5px;
-    }
-    @include tablet {
-      width: 50%;
-      border: 1px solid map-get($colors, secondary);
-      padding: 15px;
-      border-radius: 5px;
-    }
-    h2 {
-      color: black;
-      font-weight: bold;
-      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    }
-    .welcome-text {
-      color: black;
+.signup-form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .input-group {
+    display: initial;
+
+    input {
+      margin-bottom: 15px;
       margin-top: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-      font-family: monospace;
-    }
-    .btn {
-      background: map-get($colors, primary);
-      margin: 0 auto;
-      @include tablet {
-        margin-top: 5%;
-      }
     }
   }
-
+  @include desktop {
+    width: 25%;
+    border: 1px solid map-get($colors, secondary);
+    padding: 15px;
+    border-radius: 5px;
+  }
+  @include tablet {
+    width: 50%;
+    border: 1px solid map-get($colors, secondary);
+    padding: 15px;
+    border-radius: 5px;
+  }
+  h2 {
+    color: black;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .welcome-text {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: monospace;
+  }
+  .btn {
+    background: map-get($colors, primary);
+    margin: 0 auto;
+    @include tablet {
+      margin-top: 5%;
+    }
+  }
+}
