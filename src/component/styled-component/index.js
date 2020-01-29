@@ -80,6 +80,7 @@ const Avatar = styled.div`
   color: ${colors.secondary};
   margin-left: 10px;
   margin-right: 10px;
+  text-transform: uppercase;
   @media (min-width: 860px) {
     height: 50px;
     width: 13%;
@@ -89,4 +90,19 @@ const Avatar = styled.div`
     width: 18%;
   }
 `;
-export { Text, Title, Container, InputText, TextArea, Icon, Avatar };
+
+const ErrorLabel = styled.span`
+  color: tomato;
+  font-size: 12px;
+  margin-left: 12px;
+`;
+export {
+  Text,
+  Title,
+  Container,
+  InputText,
+  TextArea,
+  Icon,
+  Avatar,
+  ErrorLabel
+};
