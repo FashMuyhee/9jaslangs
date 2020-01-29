@@ -1,5 +1,9 @@
 @import "../../helpers/_variables";
 
+body {
+  background: rgb(216, 216, 224);
+  
+}
 .signin-page {
   //   background: map-get($colors, accent);
   background: rgb(216, 216, 224);
@@ -20,6 +24,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
     // border: 1px solid red;
     @include desktop {
       height: 100vh;
@@ -75,6 +80,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  .input-group {
+    display: initial;
+
+    input {
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+  }
+
   @include desktop {
     width: 25%;
     border: 1px solid map-get($colors, secondary);
@@ -102,6 +117,7 @@
   .btn {
     background: map-get($colors, primary);
     margin: 0 auto;
+    margin-top: 5%;
     @include tablet {
       margin-top: 5%;
     }
